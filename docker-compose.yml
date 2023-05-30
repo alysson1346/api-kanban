@@ -1,0 +1,42 @@
+version: "3"
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: laravel-app
+        container_name: laravel-app
+        restart: unless-stopped
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/var/www/html
+        networks:
+            - laravel-network
+        environment:
+            - APP_ENV=local
+            - APP_KEY=
+            - DB_CONNECTION=mysql
+            - DB_HOST=db
+            - DB_PORT=3306
+            - DB_DATABASE=laravel
+            - DB_USERNAME=root
+            - DB_PASSWORD=
+
+    db:
+        image: mysql:5.7
+        container_name: laravel-db
+        restart: unless-stopped
+        environment:
+            - MYSQL_DATABASE=laravel
+            - MYSQL_ROOT_PASSWORD=
+        volumes:
+            - db-data:/var/lib/mysql
+        networks:
+            - laravel-network
+
+volumes:
+    db-data:
+
+networks:
+    laravel-network:
