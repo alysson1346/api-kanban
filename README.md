@@ -32,9 +32,9 @@ Não é necessário Autenticação
 
 ```json
 
-    "nome": "João",
+    "name": "João",
 	"email": "joao@email.com",
-	"senha":"1234"
+	"password":"1234"
 
 ```
 
@@ -42,7 +42,7 @@ Não é necessário Autenticação
 
 ```json
 
-    "nome": "João",
+    "name": "João",
 	"email": "joao@email.com",
 	"id": "3e6842d2-4f73-4570-b9fd-1053704993a5",
 	"updated_at": "2023-05-30T16:17:31.000000Z",
@@ -54,7 +54,7 @@ Não é necessário Autenticação
 ```json
 
   	"email": "joao@email.com",
-	"senha":"1234"
+	"password":"1234"
 
 ```
 
@@ -82,7 +82,7 @@ necessário preencher todos os campos por ser um método PUT
 
 ```json
 
-    "nome" : "Joao Ayualizado"
+    "name" : "Joao Ayualizado"
 	"email": "joao@email.com",
 	"id": "3e6842d2-4f73-4570-b9fd-1053704993a5",
 	"updated_at": "2023-05-30T16:17:31.000000Z",
